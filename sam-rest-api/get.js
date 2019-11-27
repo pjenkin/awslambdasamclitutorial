@@ -7,13 +7,23 @@ const dynamodb = new AWS.DynamoDB.DocumentClient();
 const tableName = process.env.TABLE_NAME;
 
 exports.handler = async(event) => {
+    let userid = event.pathParameters.userid;   // get the userid from the URL/path
+    let data = await dynamodb.get({
+        TableName: tableName,
+        Key: {
+            userid: userid
+        }
+    }).promise();       // NB asynchronously using promise
 
-    return {
-        statusCode: 200,
-        body: JSON.stringify(
-            {
-                
-            }
-        )
-    };
+    if (data.Item)      // 7-153 if the item is in the data (successfully get'd from db)
+    {
+        return {
+            statusCode: 200,
+            body: JSON.stringify(data.Item)   // return, in the body of Response to /get, as JSON, the data for the requested user
+        };
+    }
+    else    // or throw an error if not found
+    {
+        throw new Error("User not found.");
+    }
 }
