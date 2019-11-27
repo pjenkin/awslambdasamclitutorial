@@ -45,6 +45,7 @@ Resources:
           Properties:
             Path: /user/{userid} # endpoint URL - NB userid as a parameter in code
             Method: post       # could actually be either put or post here
+            
   DeleteUser:
     Type: AWS::Serverless::Function
     Properties:
