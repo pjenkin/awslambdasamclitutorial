@@ -24,6 +24,12 @@ exports.handler = async(event) => {
     }
     else    // or throw an error if not found
     {
-        throw new Error("User not found.");
+        //throw new Error("User not found.");
+        // instead of just throwing an error, return an HTTP Response, of type 404 Not Found, with a body content indicating an error
+        return {
+            statusCode: 404,
+            body: JSON.stringify({message: "User not found"})   // return, in the body of Response to /get, as JSON, the data for the requested user
+        };
+
     }
 }

@@ -31,7 +31,7 @@ Resources:
           Properties:
             Path: /user/{userid}
             Method: get
-      CodeUri: s3://pnj-sam/ac0fe54206c846488141eceab26744f3
+      CodeUri: s3://pnj-sam/63e70a3600983d3fe803613922fc1d10
   PostUser:
     Type: AWS::Serverless::Function
     Properties:
@@ -43,7 +43,7 @@ Resources:
           Properties:
             Path: /user/{userid}
             Method: post
-      CodeUri: s3://pnj-sam/ac0fe54206c846488141eceab26744f3
+      CodeUri: s3://pnj-sam/63e70a3600983d3fe803613922fc1d10
   DeleteUser:
     Type: AWS::Serverless::Function
     Properties:
@@ -55,4 +55,4 @@ Resources:
           Properties:
             Path: /user/{userid}
             Method: delete
-      CodeUri: s3://pnj-sam/ac0fe54206c846488141eceab26744f3
+      CodeUri: s3://pnj-sam/63e70a3600983d3fe803613922fc1d10

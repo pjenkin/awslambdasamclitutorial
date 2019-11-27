@@ -16,6 +16,8 @@ exports.handler = async(event) => {
         }
     }).promise();   // NB all 3 dynamodb operations (i) promise'd (ii) await'd - 7-153 Finish the Lambda code
 
+    // could do a check here for existence of data.Item as in get.js
+
     return {
         statusCode: 200,
         body: JSON.stringify(

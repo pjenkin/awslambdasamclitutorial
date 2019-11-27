@@ -129,6 +129,37 @@
 				"description": "POST user id to endpoint set up by tempate.yaml in the sam-rest-api stack (section 7-157)"
 			},
 			"response": []
+		},
+		{
+			"name": "GET check for sam-rest-api stack",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://dk42ye5xt7.execute-api.eu-west-2.amazonaws.com/Stage/user/peterj",
+					"protocol": "https",
+					"host": [
+						"dk42ye5xt7",
+						"execute-api",
+						"eu-west-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"Stage",
+						"user",
+						"peterj"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"protocolProfileBehavior": {}
