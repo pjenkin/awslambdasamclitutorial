@@ -7,7 +7,7 @@ const dynamodb = new AWS.DynamoDB.DocumentClient();
 const tableName = process.env.TABLE_NAME;
 
 exports.handler = async(event) => {
-    let userid = event.pathParameters.userid;   // get the userid from the URL/path rather than from inside the HTTP Request
+    let userid = event.pathParameters.userid;   // get the userid from the URL/path - cf tempate.yaml 7-154@5:00
 
     let data = await dynamodb.delete({          // await promise (asynchronously)
         TableName: tableName,
