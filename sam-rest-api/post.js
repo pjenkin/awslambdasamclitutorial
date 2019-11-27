@@ -10,7 +10,7 @@ const tableName = process.env.TABLE_NAME;
 
 exports.handler = async(event) => {
     let userid = event.pathParameters.userid;   // get the userid from the URL/path rather than from inside the HTTP Request
-    let (firstName, lastName, email, website} = JSON.parse(event.body);   // declare/define as an object's properties from the POST'd Request's body data content (POST this from Postman to check)
+    let {firstName, lastName, email, website} = JSON.parse(event.body);   // declare/define as an object's properties from the POST'd Request's body data content (POST this from Postman to check)
 
     let item = {
         userid: userid,
