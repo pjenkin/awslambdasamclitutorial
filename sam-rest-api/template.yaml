@@ -13,7 +13,7 @@ Globals:
 
 Resources:
   Table:
-    Type: AWS::Serverless:SimpleTable   # generate a DynamoDB table at the backend
+    Type: AWS::Serverless::SimpleTable   # generate a DynamoDB table at the backend
     Properties:
       PrimaryKey:
         Name: userid
