@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "ab2e561e-bf7c-49ad-8c83-e965a3088155",
+		"name": "SAM stack section 7",
+		"description": "Udemy AWS course section 7 SAM template stack",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test hello-sam stack API Gateway for /logs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://3fjuc1kheh.execute-api.eu-west-2.amazonaws.com/Prod/logs",
+					"protocol": "https",
+					"host": [
+						"3fjuc1kheh",
+						"execute-api",
+						"eu-west-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"Prod",
+						"logs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT check for sam-rest-api stack",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Peter\",\n    \"lastName\": \"Jenkin\",\n    \"email\": \"peternjenkin@aol.com\",\n    \"website\": \"http://www.guidebookplus.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dk42ye5xt7.execute-api.eu-west-2.amazonaws.com/Stage/user/peterj",
+					"protocol": "https",
+					"host": [
+						"dk42ye5xt7",
+						"execute-api",
+						"eu-west-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"Stage",
+						"user",
+						"peterj"
+					]
+				},
+				"description": "PUT user id to endpoint set up by tempate.yaml in the sam-rest-api stack (section 7-157)"
+			},
+			"response": []
+		},
+		{
+			"name": "POST check for sam-rest-api stack",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Kevin\",\n    \"lastName\": \"Jenkin\",\n    \"email\": \"kevinpjenkin@aol.com\",\n    \"website\": \"http://www.guidebookplus.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dk42ye5xt7.execute-api.eu-west-2.amazonaws.com/Stage/user/peterj",
+					"protocol": "https",
+					"host": [
+						"dk42ye5xt7",
+						"execute-api",
+						"eu-west-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"Stage",
+						"user",
+						"peterj"
+					]
+				},
+				"description": "POST user id to endpoint set up by tempate.yaml in the sam-rest-api stack (section 7-157)"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
